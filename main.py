@@ -34,5 +34,9 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("Shutting down...")
     except Exception as e:
+    if "A wait of" in str(e):
+        print("Telegram ne rate limit laga diya hai. 40 minute baad try karein.")
+    else:
         print(f"Error: {e}")
-        sys.exit(1)
+    sys.exit(1)
+
